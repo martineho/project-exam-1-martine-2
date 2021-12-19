@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+header {
+  padding: 0 6%;
+}
+.herotop,
+.latestPosts,
+.information {
+  padding: 0 10%;
+}
+
+header {
+  background-color: transparent;
+}
+
+a.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: Quicksand, sans-serif;
+  text-decoration: none;
+}
+.nav-logo img {
+  margin-top: 13px;
+}
+
+li.nav-item {
+  list-style: none;
+}
+
+a.nav-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #222;
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+a.nav-link.active {
+  background-color: #1856f620;
+  color: #222222;
+}
+a.nav-link:hover {
+  transition: 0.3s ease;
+  background-color: #1856f620;
+}
+
+.navbar {
+  min-height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 25px;
+  position: absolute;
+  top: 25px;
+  right: 5%;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #222;
+  border-radius: 20px;
+}
+
+.herotop {
+  background-image: url(../images/herotop.jpg);
+  background-size: cover;
+  background-position: 50% 25%;
+  height: 60vh;
+  margin: 0 5%;
+  border-radius: 20px;
+  padding: 0 5%;
+}
+.herotop h1 {
+  margin: 0;
+  padding-top: 18vh;
+  font-size: 3rem;
+  font-weight: 500;
+  max-width: 600px;
+  color: white;
+}
+.herotop p {
+  font-size: 1.3rem;
+  color: white;
+  padding: 15px 1px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.cta {
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: #1856f6;
+}
+.cta:hover {
+  background-color: #0045f5;
+  transition: ease-in 0.1s;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+h2 span {
+  float: right;
+}
+h2 span a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.latestPosts {
+  padding-top: 7vh;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.latestPosts p button {
+  cursor: pointer;
+  margin: 0 2px;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.latestPosts p button img {
+  border-radius: 50px;
+  padding: 8px;
+}
+.latestPosts p button img:hover {
+  background-color: #1856f620;
+  transition: 0.3s ease;
+  scale: 1.1;
+}
+.slider {
+  margin: 10px 10% 10px 10%;
+  padding-bottom: 20px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  gap: 35px;
+  scroll-behavior: smooth;
+  transition: ease 0.8s;
+}
+
+.slider .item {
+  border-radius: 20px;
+  height: 250px;
+  min-width: 260px;
+  max-width: 260px;
+  margin: 0 1px 0px 0;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+.item:hover {
+  transition: ease-in-out 0.3s;
+}
+.item:hover .title p {
+  padding-left: 5px;
+  transition: ease 0.3s;
+}
+.item:hover .title div {
+  transition: ease-in 0.2s;
+  display: inline-block;
+}
+.item:hover img {
+  backdrop-filter: blur(2px);
+  filter: blur(0.8px) opacity(0.9);
+  transition: 0.5s ease-in-out;
+  scale: 0.98;
+}
+.item .title {
+  padding: 5px 2px;
+  display: inline-flex;
+}
+.item .title p {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.title div {
+  color: #1856f6;
+  transition: 0.2s ease;
+  display: none;
+  margin-right: 5px;
+}
+
+.slider .item img {
+  width: 260px;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.information .newsletter {
+  background-color: #cbdaff;
+  border-radius: 15px;
+  padding: 50px 50px;
+  height: fit-content;
+  width: 100%;
+  margin: auto;
+}
+.newsletter div {
+  padding-top: 2%;
+}
+.newsletter form {
+  display: flex;
+  justify-content: space-between;
+}
+.information h2 {
+  color: #222;
+}
+.newsletter p {
+  padding: 5px 0;
+  color: #222;
+}
+.newsletterInput {
+  border: 1.5px solid white;
+  border-radius: 20px;
+  padding: 8px 10px;
+  margin-right: 5px;
+}
+.information button {
+  background-color: #1856f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.information button:hover {
+  background-color: #0045f5;
+}
+
+input:focus {
+  outline: none;
+  border: 1.5px solid #1856f6;
+}
+textarea:focus {
+  outline: none;
+  border: 1.5px solid #1856f6;
+}
+
+input:focus::placeholder {
+  color: rgb(133, 133, 136);
+}
+
+textarea:focus::placeholder {
+  color: rgb(133, 133, 136);
+}
+
+footer {
+  display: flex;
+  padding: 7% 10% 3% 10%;
+  justify-content: space-between;
+}
+
+footer div {
+  display: inline-flex;
+  gap: 25px;
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+footer a {
+  display: block;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222222;
+}
+
+.form-error {
+  display: none;
+  color: rgb(255, 63, 49);
+  font-size: 0.8rem;
+  padding: 5px 2px;
+}
+
+@media (max-width: 850px) {
+  header {
+    padding: 0 5%;
+  }
+  .herotop {
+    height: 60vh;
+    margin: 0 3vw;
+  }
+  .herotop h1 {
+    padding-top: 20vh;
+    font-size: 3rem;
+  }
+  .herotop p {
+    font-size: 1.2rem;
+  }
+  .latestPosts {
+    padding-top: 5vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .slider {
+    margin: 0 5% 0 5%;
+    overflow-x: scroll;
+  }
+  .information .newsletter {
+    padding: 40px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .newsletter form {
+    display: block;
+    justify-content: space-between;
+  }
+  .information p {
+    font-size: 0.9rem;
+  }
+  .newsletterInput {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .information button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header,
+  footer {
+    padding: 0 5%;
+  }
+  .navbar {
+    min-height: 80px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    gap: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 94vw;
+    transition: 0.3s;
+    padding: 20px 20px;
+    align-items: flex-start;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #2222222a;
+  }
+  .nav-item {
+    margin: 16px 8px;
+    color: #222222;
+  }
+  a.nav-link {
+    color: #222222;
+  }
+  a.nav-link.active {
+    border-bottom: none;
+    color: #1856f6;
+  }
+  a.nav-link:hover {
+    color: #222222;
+  }
+  .nav-menu.active {
+    left: 3vw;
+  }
+  .herotop {
+    height: 70vh;
+    margin: 3vw;
+  }
+  .herotop h1 {
+    padding-top: 20vh;
+    font-size: 2rem;
+    font-weight: 500;
+    max-width: 800px;
+  }
+  .herotop p {
+    font-size: 1rem;
+    color: white;
+    margin: 10px 1px 30px 1px;
+    font-weight: 300;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .slider {
+    margin: 0 5% 0 5%;
+    gap: 20px;
+    height: 45vh;
+  }
+  .slider .item {
+    min-width: 90vw;
+  }
+  .slider .item img {
+    min-width: 90vw;
+    height: 30vh;
+  }
+  .information {
+    margin-top: 3vh;
+    padding: 0 3vw;
+  }
+  .information .newsletter {
+    padding: 40px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  footer {
+    flex-direction: column;
+    margin: 5vh 5vw;
+    text-align: center;
+  }
+  footer div.footer-menu {
+    flex-direction: column;
+    gap: 25px;
+    order: 2;
+  }
+  footer a.social-media {
+    flex-direction: row;
+    margin: 20px 0 50px 0;
+  }
+  footer p {
+    order: 5;
+    margin-top: 20px;
+  }
+}
